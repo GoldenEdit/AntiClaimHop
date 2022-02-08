@@ -63,18 +63,18 @@ public class CombatListener implements Listener {
             CombatHandler.applyTag(damager);
         }
 
-        @EventHandler(priority = EventPriority.HIGHEST, ignoreCancelled = true)
-        public void onCobweb(BlockPlaceEvent event) {
-            if (event.getBlockPlaced().getType() != Material.COBWEB)
-                return;
-
-            if (!CombatHandler.isTagged(event.getPlayer()))
-                return;
-
-            event.setCancelled(true);
-
-            event.getPlayer().sendMessage(ChatColor.RED + "You can't place cobwebs while being in combat.");
-        }
+//        @EventHandler(priority = EventPriority.HIGHEST, ignoreCancelled = true)
+//        public void onCobweb(BlockPlaceEvent event) {
+//            if (event.getBlockPlaced().getType() != Material.COBWEB)
+//                return;
+//
+//            if (!CombatHandler.isTagged(event.getPlayer()))
+//                return;
+//
+//            event.setCancelled(true);
+//
+//            event.getPlayer().sendMessage(ChatColor.RED + "You can't place cobwebs while being in combat.");
+//        }
 
         @EventHandler
         public void onQuit(PlayerQuitEvent event) {
