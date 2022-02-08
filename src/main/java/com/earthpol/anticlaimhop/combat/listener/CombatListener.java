@@ -111,7 +111,7 @@ public class CombatListener implements Listener {
         }
 
         // Lowercase
-        private static final Set<String> WHITELISTED_COMMANDS = ImmutableSet.of("tc", "nc", "g", "ally", "msg", "r", "reply", "tell", "pm", "mod", "admin", "combattag", "lc");
+        private static final Set<String> WHITELISTED_COMMANDS = ImmutableSet.of("tc", "nc", "g", "alc", "msg", "r", "reply", "tell", "pm", "mod", "admin", "combattag", "lc");
 
         @EventHandler
         public void onPreProcessCommand(PlayerCommandPreprocessEvent event) {
