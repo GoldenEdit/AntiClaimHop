@@ -30,9 +30,9 @@ public final class Main extends JavaPlugin {
     @Override
     public void onEnable() {
         instance = this;
-        log.info("§e======= §aEarthPol AntiClaimHop §e=======");
-        log.info("§e= This plugin developed for EarthPol.");
-        log.info("§e= Visit us at play.earthpol.com");
+        log.info("§e======= §aCloudNine AntiClaimHop §e=======");
+        log.info("§e= This plugin developed for EarthPol. Forked for CloudNine");
+        log.info("§e= Visit us at cloudninemc.net");
         log.info("§e= Join our discord at:" + DISCORD);
         setupListeners();
         setupCommands();
