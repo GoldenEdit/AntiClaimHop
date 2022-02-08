@@ -116,7 +116,7 @@ public class CombatListener implements Listener {
         @EventHandler
         public void onPreProcessCommand(PlayerCommandPreprocessEvent event) {
             Player player = event.getPlayer();
-            if (!CombatHandler.isTagged(player) || player.hasPermission("earthpol.combattag.bypass"))
+            if (!CombatHandler.isTagged(player) || player.hasPermission("cloudnine.combattag.bypass"))
                 return;
 
             String message = event.getMessage();
@@ -167,17 +167,17 @@ public class CombatListener implements Listener {
             player.sendMessage(ChatColor.RED + "You can't use ender chest while being in combat.");
         }
 
-        @EventHandler
-        public void onRiptide(PlayerMoveEvent event) {
-            Player player = event.getPlayer();
-
-            if (!CombatHandler.isTagged(player))
-                return;
-
-            if (!player.isRiptiding())
-                return;
-
-            event.setCancelled(true);
-            player.sendMessage(ChatColor.RED + "The riptide enchantment is disabled while being in combat.");
-        }
+//        @EventHandler
+//        public void onRiptide(PlayerMoveEvent event) {
+//            Player player = event.getPlayer();
+//
+//            if (!CombatHandler.isTagged(player))
+//                return;
+//
+//            if (!player.isRiptiding())
+//                return;
+//
+//            event.setCancelled(true);
+//            player.sendMessage(ChatColor.RED + "The riptide enchantment is disabled while being in combat.");
+//        }
 }
