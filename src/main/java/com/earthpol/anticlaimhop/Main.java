@@ -5,6 +5,7 @@ import com.earthpol.anticlaimhop.combat.bossbar.BossBarTask;
 import com.earthpol.anticlaimhop.combat.listener.CombatListener;
 import com.earthpol.anticlaimhop.commands.CombatTagCommand;
 import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.Objects;
@@ -53,6 +54,10 @@ public final class Main extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        // Plugin shutdown logic
+        for (Player p: this.getServer().getOnlinePlayers()) {
+            if (CombatHandler.isTagged(p)){
+                CombatHandler.removeTag(p);
+            }
+        }
     }
 }
