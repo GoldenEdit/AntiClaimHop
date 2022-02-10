@@ -18,4 +18,4 @@ In this plugin the following changes occur.
 
 There are two versions, a SiegeWar compatible one and a regular Towny use one.
 
-You can download them here: https://github.com/EarthPol/AntiClaimHop/releases
+You can download all releases at this link here: https://github.com/EarthPol/AntiClaimHop/releases
